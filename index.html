@@ -221,10 +221,31 @@ color:white;
 text-align:center;
 padding:25px;
 }
-.whatsapp-float{
+{.whatsapp-float
 ...
+{
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25d366;
+color:white;
+font-size:32px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+z-index:9999;
+transition:0.3s;
 }
 
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
 /* RESPONSIVE */
 
 @media(max-width:768px){
