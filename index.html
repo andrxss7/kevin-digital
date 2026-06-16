@@ -27,6 +27,7 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(15,23,42,0.95);
+backdrop-filter: blur(10px);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -35,9 +36,22 @@ z-index:1000;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
 font-size:28px;
 font-weight:bold;
 color:white;
+}
+
+.logo-icon{
+background:#38bdf8;
+color:#0f172a;
+padding:8px 12px;
+border-radius:12px;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 0 15px rgba(56,189,248,0.5);
 }
 
 .logo span{
@@ -49,11 +63,14 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-weight:bold;
+padding:8px 14px;
+border-radius:8px;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#38bdf8;
+background:#38bdf8;
+color:#0f172a;
 }
 
 /* HERO */
@@ -269,6 +286,7 @@ display:none;
 <header>
 
 <div class="logo">
+<span class="logo-icon">KD</span>
 Kevin <span>Digital</span>
 </div>
 
