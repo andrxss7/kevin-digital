@@ -96,8 +96,8 @@ color:white;
 
 .hero-content{
 max-width:850px;
+animation:fadeUp 1s ease;
 }
-
 .hero h1{
 font-size:65px;
 margin-bottom:20px;
@@ -121,7 +121,22 @@ transition:0.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(34,197,94,0.4);
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
 
 /* SOBRE MI */
@@ -190,7 +205,8 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .card h3{
