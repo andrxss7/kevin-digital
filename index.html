@@ -387,23 +387,91 @@ transition:0.3s;
 .whatsapp-float:hover{
 transform:scale(1.1);
 }
-/* RESPONSIVE */
+.menu-btn{
+display:none;
+font-size:32px;
+color:white;
+cursor:pointer;
+}
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
+.menu-btn{
+display:block;
 }
 
 nav{
-display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0f172a;
+display:flex;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(-20px);
+transition:0.3s;
+}
+
+nav.active{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+nav a{
+margin:12px 0;
 }
 
 }
+
+.menu-btn{
+display:none;
+font-size:32px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+
+nav{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0f172a;
+display:flex;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(-20px);
+transition:0.3s;
+}
+
+nav.active{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+nav a{
+margin:12px 0;
+}
+
+}
+
+/* RESPONSIVE */
 
 </style>
 
@@ -415,6 +483,10 @@ display:none;
 <div class="logo">
 <span class="logo-icon">KD</span>
 Kevin <span>Digital</span>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
 </div>
 
 <nav>
@@ -660,5 +732,12 @@ href="https://wa.me/573126696031?text=Hola%20Kevin,%20vi%20tu%20pagina%20web"
 target="_blank">
 💬
 </a>
+<script>
+
+function toggleMenu(){
+document.querySelector("nav").classList.toggle("active");
+}
+
+</script>
 </body>
 </html>
